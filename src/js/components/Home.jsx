@@ -11,7 +11,7 @@ import { Jumbotron } from "./Jumbotron.jsx";
 let viajes = [
 	{
 		nombre: "Destinos Destacados",
-		info:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis aliquam nemo, harum aut ea praesentium neque porro ullam odit inventore, impedit, sit excepturi quidem nobis dolores sint maiores veritatis. Amet ex quas laborum dolor.!",
+		info: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis aliquam nemo, harum aut ea praesentium neque porro ullam odit inventore, impedit, sit excepturi quidem nobis dolores sint maiores veritatis. Amet ex quas laborum dolor.impedit, sit excepturi quidem !",
 		img: "https://content-viajes.nationalgeographic.com.es/medio/2017/04/24/bali-indonesia_5ae3dbfe.jpg",
 		url: "https://viajes.nationalgeographic.com.es/a/destinos-mas-populares_11415",
 		boton: "Ir a Destinos"
@@ -32,7 +32,7 @@ let viajes = [
 	},
 	{
 		nombre: "Mejores Destinos Turísticos en Verano",
-		info:" Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum a vero aut doloremque quidem perspiciatis porro aspernatur nisi sapiente sequi. Amet consectetur adipisicing elit. Suspendisse vulputate tempus accumsan.",
+		info: " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum a vero aut doloremque quidem perspiciatis porro aspernatur nisi sapiente sequi. Amet consectetur adipisicing elit. Suspendisse vulputate tempus accumsan.",
 		img: "https://travel.usnews.com/dims4/USNEWS/c9e626c/2147483647/resize/976x652%5E%3E/crop/976x652/quality/85/format/webp/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2Fgettyimages-177187495_45F9W7n.jpg",
 		url: "https://travel.usnews.com/rankings/best-summer-vacations/",
 		boton: "Mejores Destinos en verano"
@@ -41,32 +41,32 @@ let viajes = [
 
 const Home = () => {
 	return (
-	
-		<div className="container-fluid flex-column">
-				
-				<div className="row ">
-				<Navbar/>
-				</div>
-
-				<div className="row d-flex    my-3 mx-3">
-				<Jumbotron/>
-				</div>
-				
-				<div className="row d-flex my-3 mx-2 pb-2 ">  
-            
-				{viajes.map((item, index) => (
-					<div className="col-lg-3 col-md-6 col-12" >
-                        <Card key={index} nombre={item.nombre}  info={item.info}  img={item.img}  url={item.url}  boton={item.boton} />
-					</div>
-                ))}
+				<>
+			<div>
+				<Navbar />
 			</div>
-			
-			<div className="row"> 
-       			 <Footer/>
-   			 </div>
-</div>
 
-	
+			<div className="container-fluid mt-4  justify-content-center ">
+
+				<div className="row justify-content-center  ">
+					<Jumbotron />
+				</div>
+
+				<div className="row d-flex flex-row mb-1 justify-content-center ">  
+
+					{viajes.map((item, index) => (
+						<Card key={index} nombre={item.nombre} info={item.info} img={item.img} url={item.url} boton={item.boton} />
+		))}
+				</div>
+			</div>
+
+				<div>
+					<Footer />
+				</div>
+
+		</>
 	);
 };
-export default Home;
+
+export default Home;																																																																				
+		

@@ -4,7 +4,7 @@ export const Navbar =()=> {
     return(
         <>
  
-<div className=" d-flex justify-content-between p-2 flex-grow-1 text-light bg-dark  align-items-center" ><h5>Viajes</h5>
+<div className=" d-flex justify-content-between   text-light bg-dark  align-items-center " ><h5>Viajes</h5>
   <ul className="nav justify-content-end ">
   <li className="nav-item">
     <a className="nav-link active fw-bold text-light" href="#">Home</a>
